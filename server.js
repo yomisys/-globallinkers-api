@@ -18,11 +18,22 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' } // allow serving uploaded files
 }));
 
+const allowedOrigins = [
+  'https://yomisys.github.io',
+  'http://localhost:3000',
+  'http://127.0.0.1:5500',
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || '*',  // Lock this down in production
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error('CORS: not allowed'));
+  },
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
+app.options('*', cors());
 
 app.use(morgan('dev'));
 app.use(express.json({ limit: '10mb' }));
