@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Linkers Ltd — Recruitment & HR Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>/* ===== GLOBAL LINKERS LTD — STYLESHEET =====
+   Brand Colors: Corporate Blue #0A3D91 | Accent Yellow #F2B705
+   Typography: Montserrat (primary) | Lato (secondary)
+*/
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #0A3D91;
+  --blue-dark: #072d6b;
+  --blue-light: #1a52b8;
+  --gold: #F2B705;
+  --gold-dark: #d4a004;
+  --gold-light: #ffc929;
+  --grey: #333333;
+  --grey-mid: #666;
+  --grey-light: #999;
+  --grey-bg: #f5f7fa;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 4px 24px rgba(10,61,145,0.10);
+  --shadow-md: 0 8px 40px rgba(10,61,145,0.14);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Lato', sans-serif; color: var(--grey); background: #fff; overflow-x: hidden; }
+h1,h2,h3,h4,h5 { font-family: 'Montserrat', sans-serif; color: var(--blue); line-height: 1.2; }
+
+.text-gold { color: var(--gold); }
+.text-center { text-align: center; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.full-w { width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background: var(--blue); color: var(--white);
+  border: 2px solid var(--blue); padding: 12px 24px;
+  border-radius: 8px; font-family: 'Montserrat', sans-serif;
+  font-weight: 600; font-size: 14px; cursor: pointer;
+  transition: all var(--transition); white-space: nowrap; display: inline-block;
+}
+.btn-primary:hover { background: var(--blue-light); border-color: var(--blue-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(10,61,145,0.3); }
+.btn-primary.large { padding: 16px 32px; font-size: 15px; }
+.btn-gold { background: var(--gold); color: var(--blue); border: 2px solid var(--gold); padding: 12px 28px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; transition: all var(--transition); display: inline-block; }
+.btn-gold:hover { background: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(242,183,5,0.4); }
+.btn-gold-large { background: var(--gold); color: var(--blue); border: none; padding: 16px 36px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; cursor: pointer; transition: all var(--transition); }
+.btn-gold-large:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(242,183,5,0.5); }
+.btn-outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); padding: 11px 22px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: all var(--transition); }
+.btn-outline:hover { background: var(--blue); color: #fff; }
+.btn-outline-blue { background: transparent; color: var(--blue); border: 2px solid var(--blue); padding: 11px 22px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: all var(--transition); display: inline-block; text-align: center; }
+.btn-outline-blue:hover { background: var(--blue); color: #fff; }
+.btn-white-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); padding: 15px 32px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 15px; cursor: pointer; transition: all var(--transition); }
+.btn-white-outline:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--transition);
+}
+.navbar.scrolled { box-shadow: 0 2px 20px rgba(10,61,145,0.12); }
+.nav-container { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; height: 72px; }
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.logo-icon { display: flex; align-items: center; }
+.logo-text { display: flex; flex-direction: column; }
+.logo-main { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 17px; color: var(--blue); line-height: 1.1; }
+.logo-sub { font-size: 10px; color: var(--grey-mid); letter-spacing: 0.5px; font-family: 'Lato', sans-serif; }
+.nav-links { display: flex; list-style: none; gap: 4px; margin-left: auto; }
+.nav-link { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 13.5px; color: var(--grey); padding: 8px 14px; border-radius: 6px; transition: all var(--transition); cursor: pointer; }
+.nav-link:hover, .nav-link.active { color: var(--blue); background: rgba(10,61,145,0.07); }
+.nav-admin { color: var(--gold-dark) !important; font-weight: 600; }
+.nav-cta { display: flex; gap: 8px; flex-shrink: 0; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--blue); border-radius: 2px; transition: all var(--transition); }
+
+/* ===== PAGES ===== */
+.page { display: none; min-height: 100vh; }
+.page.active { display: block; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #031d4a 0%, #0A3D91 50%, #1252b8 100%);
+  padding-top: 72px;
+}
+.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: 0.2;
+}
+.orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, #F2B705, transparent); top: -200px; right: -100px; }
+.orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, #4a90d9, transparent); bottom: -100px; left: -100px; }
+.network-svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.6; }
+.pulse-node { animation: pulse 2s ease-in-out infinite; }
+.pulse-node-sm { animation: pulse 2s ease-in-out infinite; animation-delay: 0.5s; }
+@keyframes pulse { 0%,100% { opacity: 0.6; r: 8; } 50% { opacity: 1; r: 10; } }
+.net-line { stroke-dasharray: 300; stroke-dashoffset: 300; animation: drawLine 2s ease forwards; }
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+.hero-content { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 80px 24px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(242,183,5,0.15); border: 1px solid rgba(242,183,5,0.4); color: var(--gold); padding: 8px 16px; border-radius: 100px; font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 500; margin-bottom: 28px; }
+.badge-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; animation: pulse 1.5s infinite; }
+.hero-title { font-size: clamp(40px, 7vw, 84px); font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 24px; letter-spacing: -2px; }
+.hero-subtitle { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.75); max-width: 580px; line-height: 1.7; margin-bottom: 48px; font-weight: 300; }
+.hero-search { margin-bottom: 48px; }
+.search-box { display: flex; align-items: center; background: #fff; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.3); overflow: hidden; max-width: 720px; }
+.search-field { display: flex; align-items: center; gap: 10px; padding: 0 20px; flex: 1; }
+.search-field input { border: none; outline: none; font-family: 'Lato', sans-serif; font-size: 15px; color: var(--grey); width: 100%; padding: 20px 0; }
+.search-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+.search-btn { background: var(--gold); color: var(--blue); border: none; padding: 20px 32px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; transition: background var(--transition); white-space: nowrap; }
+.search-btn:hover { background: var(--gold-dark); }
+.search-tags { margin-top: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.search-tags span { color: rgba(255,255,255,0.6); font-size: 13px; }
+.search-tags a { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.12); padding: 5px 14px; border-radius: 100px; font-size: 13px; border: 1px solid rgba(255,255,255,0.2); transition: all var(--transition); }
+.search-tags a:hover { background: rgba(255,255,255,0.25); }
+.hero-stats { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; color: var(--gold); }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.65); }
+.stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+
+/* ===== SECTION LABELS ===== */
+.section-label { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.section-label.light { color: var(--gold-light); }
+.section-label.center { text-align: center; }
+.section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+.section-title.light { color: #fff; }
+.section-subtitle { font-size: 17px; color: var(--grey-mid); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+
+/* ===== SERVICES ===== */
+.services-section { padding: 100px 0; background: var(--grey-bg); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.service-card {
+  background: #fff; border-radius: 16px; padding: 36px 32px;
+  border: 1px solid var(--border); position: relative;
+  transition: all 0.3s ease; cursor: default;
+  animation: fadeUp 0.5s ease both; animation-delay: var(--delay);
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(10,61,145,0.2); }
+.service-card.featured { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(10,61,145,0.1); }
+.service-badge-tag { position: absolute; top: 20px; right: 20px; background: var(--gold); color: var(--blue); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; }
+.service-icon-wrap { width: 64px; height: 64px; background: rgba(10,61,145,0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--blue); }
+.service-card.featured .service-icon-wrap { background: rgba(10,61,145,0.12); }
+.service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.service-card p { color: var(--grey-mid); line-height: 1.7; font-size: 15px; }
+.service-link { display: inline-block; margin-top: 16px; color: var(--blue); font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 13px; transition: gap 0.2s; }
+.service-link:hover { color: var(--blue-light); }
+
+/* ===== FEATURED JOBS ===== */
+.featured-jobs-section { padding: 100px 0; }
+.section-header-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+.jobs-preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+.job-preview-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  padding: 24px; transition: all var(--transition); cursor: pointer;
+}
+.job-preview-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(10,61,145,0.2); }
+.job-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.job-company-logo { width: 44px; height: 44px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; }
+.job-badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 100px; font-family: 'Montserrat', sans-serif; }
+.job-badge.full-time { background: rgba(10,61,145,0.1); color: var(--blue); }
+.job-badge.contract { background: rgba(242,183,5,0.15); color: #b07c00; }
+.job-badge.remote { background: rgba(34,197,94,0.1); color: #15803d; }
+.job-card-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 4px; color: var(--grey); }
+.job-card-company { font-size: 14px; color: var(--grey-mid); margin-bottom: 16px; }
+.job-card-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.job-meta-item { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--grey-mid); }
+.job-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.job-card-salary { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--blue); }
+.job-card-date { font-size: 12px; color: var(--grey-light); }
+
+/* ===== WHY SECTION ===== */
+.why-section { padding: 100px 0; background: linear-gradient(135deg, #031d4a, #0A3D91); }
+.why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.why-desc { color: rgba(255,255,255,0.75); line-height: 1.8; font-size: 16px; margin-bottom: 36px; }
+.values-list { margin-bottom: 36px; display: flex; flex-direction: column; gap: 20px; }
+.value-item { display: flex; gap: 16px; align-items: flex-start; }
+.value-dot { width: 10px; height: 10px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+.value-item strong { font-family: 'Montserrat', sans-serif; color: #fff; display: block; margin-bottom: 4px; }
+.value-item p { color: rgba(255,255,255,0.65); font-size: 14px; margin: 0; }
+.metrics-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 32px; }
+.metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.metric-box { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+.metric-box.gold { background: rgba(242,183,5,0.15); border-color: rgba(242,183,5,0.3); }
+.metric-big { display: block; font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: var(--gold); }
+.metric-label { font-size: 12px; color: rgba(255,255,255,0.6); display: block; margin-top: 4px; }
+.testimonial-mini { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; border-left: 3px solid var(--gold); margin-top: 4px; }
+.testimonial-mini p { color: rgba(255,255,255,0.85); font-style: italic; font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar { width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; color: var(--blue); }
+.testimonial-author strong { color: #fff; font-size: 13px; display: block; }
+.testimonial-author small { color: rgba(255,255,255,0.55); font-size: 12px; }
+
+/* ===== CTA STRIP ===== */
+.cta-strip { background: var(--gold); padding: 80px 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+.cta-text h2 { font-size: 32px; color: var(--blue); margin-bottom: 8px; }
+.cta-text p { color: var(--blue); opacity: 0.75; font-size: 16px; }
+.cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ===== PARTNERS ===== */
+.partners-section { padding: 60px 0; border-top: 1px solid var(--border); }
+.partners-strip { display: flex; gap: 0; flex-wrap: wrap; margin-top: 24px; }
+.partner-logo { flex: 1; min-width: 120px; text-align: center; padding: 16px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; color: var(--grey-light); border-right: 1px solid var(--border); transition: color var(--transition); }
+.partner-logo:last-child { border-right: none; }
+.partner-logo:hover { color: var(--blue); }
+
+/* ===== PAGE HERO MINI ===== */
+.page-hero-mini {
+  background: linear-gradient(135deg, #031d4a, #0A3D91);
+  padding: 120px 0 80px; margin-top: 72px;
+}
+.page-hero-mini h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: #fff; margin-bottom: 16px; }
+.page-hero-mini p { color: rgba(255,255,255,0.75); font-size: 18px; max-width: 560px; }
+
+/* ===== JOBS PAGE ===== */
+.jobs-main { padding: 48px 0 80px; }
+.jobs-search-bar {
+  display: flex; gap: 12px; background: #fff;
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px; margin-bottom: 40px; flex-wrap: wrap;
+  box-shadow: var(--shadow);
+}
+.jsb-field { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 180px; border-right: 1px solid var(--border); padding-right: 12px; }
+.jsb-field:last-of-type { border-right: none; }
+.jsb-field input { border: none; outline: none; font-family: 'Lato', sans-serif; font-size: 14px; width: 100%; color: var(--grey); }
+.jobs-search-bar select { border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-family: 'Lato', sans-serif; font-size: 14px; color: var(--grey); outline: none; background: #fff; }
+.jobs-layout { display: grid; grid-template-columns: 280px 1fr; gap: 32px; }
+.jobs-sidebar { display: flex; flex-direction: column; gap: 24px; }
+.filter-block { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.filter-block h4 { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+.check-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--grey-mid); padding: 4px 0; cursor: pointer; }
+.check-item input { accent-color: var(--blue); }
+.highlight-box { background: rgba(10,61,145,0.04); border-color: rgba(10,61,145,0.15); }
+.highlight-box h4 { color: var(--blue); }
+.highlight-box p { font-size: 13px; color: var(--grey-mid); margin-bottom: 12px; }
+.alert-input { width: 100%; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font-size: 14px; font-family: 'Lato', sans-serif; margin-bottom: 8px; outline: none; }
+.alert-input:focus { border-color: var(--blue); }
+.jobs-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.jobs-meta-bar span { font-size: 14px; color: var(--grey-mid); }
+.jobs-meta-bar select { border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-size: 14px; font-family: 'Lato', sans-serif; outline: none; }
+.jobs-list { display: flex; flex-direction: column; gap: 16px; }
+.job-list-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  padding: 24px; display: flex; gap: 20px; align-items: flex-start;
+  transition: all var(--transition); cursor: pointer;
+}
+.job-list-card:hover { border-color: var(--blue); box-shadow: var(--shadow); transform: translateX(4px); }
+.job-list-card.featured-job { border-color: var(--gold); background: #fffdf0; }
+.jlc-logo { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #fff; flex-shrink: 0; }
+.jlc-body { flex: 1; }
+.jlc-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; color: var(--grey); margin-bottom: 4px; }
+.jlc-company { font-size: 14px; color: var(--grey-mid); margin-bottom: 12px; }
+.jlc-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.jlc-tag { font-size: 12px; padding: 3px 10px; border-radius: 100px; background: var(--grey-bg); color: var(--grey-mid); font-family: 'Montserrat', sans-serif; font-weight: 500; }
+.jlc-tag.blue { background: rgba(10,61,145,0.1); color: var(--blue); }
+.jlc-meta { display: flex; gap: 16px; font-size: 13px; color: var(--grey-light); flex-wrap: wrap; }
+.jlc-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; flex-shrink: 0; }
+.jlc-salary { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--blue); font-size: 15px; }
+.jlc-date { font-size: 12px; color: var(--grey-light); }
+.pagination { display: flex; gap: 8px; justify-content: center; margin-top: 32px; }
+.page-btn { width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: #fff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: all var(--transition); }
+.page-btn.active, .page-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* ===== EMPLOYERS PAGE ===== */
+.employers-main { padding: 48px 0 80px; }
+.employer-layout { display: grid; grid-template-columns: 1fr 380px; gap: 40px; margin-bottom: 80px; }
+.employer-form-wrap { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+.employer-form-wrap h2 { font-size: 26px; margin-bottom: 8px; }
+.form-intro { color: var(--grey-mid); margin-bottom: 32px; font-size: 15px; }
+.post-job-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full { grid-column: 1/-1; }
+.form-group label { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--grey); }
+.form-group input, .form-group select, .form-group textarea {
+  border: 1.5px solid var(--border); border-radius: 8px;
+  padding: 12px 14px; font-family: 'Lato', sans-serif; font-size: 14px;
+  color: var(--grey); outline: none; transition: border-color var(--transition);
+  background: #fff; resize: vertical;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); }
+.form-actions { display: flex; flex-direction: column; gap: 12px; }
+.form-note { font-size: 13px; color: var(--grey-mid); line-height: 1.6; }
+.employer-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.emp-benefit-card { background: var(--blue); border-radius: 16px; padding: 28px; color: #fff; }
+.emp-benefit-card h3 { font-size: 18px; color: #fff; margin-bottom: 20px; }
+.benefit-item { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+.benefit-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.benefit-item strong { color: #fff; display: block; margin-bottom: 4px; font-size: 14px; font-family: 'Montserrat', sans-serif; }
+.benefit-item p { color: rgba(255,255,255,0.7); font-size: 13px; margin: 0; line-height: 1.5; }
+.emp-contact-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+.emp-contact-card h4 { font-size: 16px; margin-bottom: 8px; }
+.emp-contact-card p { color: var(--grey-mid); font-size: 14px; margin-bottom: 16px; }
+.packages-section { padding-top: 40px; }
+.packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.package-card { border: 1px solid var(--border); border-radius: 16px; padding: 32px; position: relative; transition: all var(--transition); }
+.package-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.package-card.featured { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(10,61,145,0.1); }
+.pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--blue); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; padding: 4px 16px; border-radius: 100px; white-space: nowrap; }
+.pkg-header h3 { font-size: 22px; margin-bottom: 4px; }
+.pkg-price { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 800; color: var(--gold); margin: 8px 0; }
+.pkg-header p { color: var(--grey-mid); font-size: 13px; margin-bottom: 20px; }
+.pkg-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.pkg-features li { font-size: 14px; color: var(--grey-mid); }
+
+/* ===== ABOUT ===== */
+.about-main { padding: 80px 0; }
+.about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 80px; align-items: start; }
+.about-text h2 { font-size: 32px; margin-bottom: 20px; }
+.about-text p { color: var(--grey-mid); line-height: 1.8; margin-bottom: 16px; font-size: 16px; }
+.about-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.about-mini-card { border-radius: 12px; padding: 20px; }
+.about-mini-card.blue { background: var(--blue); color: #fff; }
+.about-mini-card.blue strong { color: #fff; font-family: 'Montserrat', sans-serif; display: block; margin-bottom: 6px; }
+.about-mini-card.blue p { color: rgba(255,255,255,0.75); font-size: 14px; margin: 0; }
+.about-mini-card.gold { background: var(--gold); color: var(--blue); }
+.about-mini-card.gold strong { font-family: 'Montserrat', sans-serif; display: block; margin-bottom: 6px; }
+.about-mini-card.gold p { font-size: 14px; margin: 0; opacity: 0.8; }
+.about-mini-card.white { background: #fff; border: 1px solid var(--border); }
+.about-mini-card.white strong { font-family: 'Montserrat', sans-serif; color: var(--blue); display: block; margin-bottom: 6px; }
+.about-mini-card.white p { color: var(--grey-mid); font-size: 14px; margin: 0; }
+.about-mini-card.dark { background: var(--grey); color: #fff; }
+.about-mini-card.dark strong { color: var(--gold); font-family: 'Montserrat', sans-serif; display: block; margin-bottom: 6px; }
+.about-mini-card.dark p { color: rgba(255,255,255,0.75); font-size: 14px; margin: 0; }
+.values-section { background: var(--grey-bg); border-radius: 20px; padding: 60px 48px; }
+.values-section h2 { margin-bottom: 8px; }
+.values-section .section-subtitle { text-align: center; margin: 0 auto 40px; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+.value-card { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid var(--border); transition: all var(--transition); }
+.value-card:hover { border-color: var(--blue); transform: translateY(-4px); }
+.value-num { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 900; color: rgba(10,61,145,0.1); line-height: 1; margin-bottom: 8px; }
+.value-card h3 { font-size: 16px; margin-bottom: 10px; }
+.value-card p { color: var(--grey-mid); font-size: 14px; line-height: 1.7; margin: 0; }
+
+/* ===== CONTACT ===== */
+.contact-main { padding: 80px 0; }
+.contact-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; }
+.contact-form-wrap h2 { font-size: 28px; margin-bottom: 28px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.contact-info-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 32px; position: sticky; top: 96px; }
+.contact-info-card h3 { font-size: 20px; margin-bottom: 24px; }
+.contact-detail { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+.contact-detail strong { font-family: 'Montserrat', sans-serif; font-size: 13px; color: var(--blue); display: block; margin-bottom: 2px; }
+.contact-detail p { font-size: 14px; color: var(--grey-mid); margin: 0; }
+.social-links { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 8px; }
+.social-links h4 { font-size: 14px; margin-bottom: 12px; }
+.social-row { display: flex; gap: 10px; }
+.social-btn { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; color: var(--blue); transition: all var(--transition); }
+.social-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* ===== ADMIN ===== */
+.admin-login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #031d4a, #0A3D91); padding-top: 72px; }
+.admin-login-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 48px; width: 100%; max-width: 420px; }
+.admin-logo { text-align: center; margin-bottom: 32px; }
+.admin-logo h2 { color: #fff; font-size: 24px; margin: 12px 0 4px; }
+.admin-logo p { color: rgba(255,255,255,0.6); font-size: 13px; }
+.admin-login-box .form-group label { color: rgba(255,255,255,0.8); }
+.admin-login-box .form-group input { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+.admin-login-box .form-group input::placeholder { color: rgba(255,255,255,0.4); }
+.admin-login-box .form-group input:focus { border-color: var(--gold); }
+.login-hint { text-align: center; color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 12px; }
+.admin-layout { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 72px); margin-top: 72px; }
+.admin-sidebar { background: var(--blue); padding: 0; display: flex; flex-direction: column; position: sticky; top: 72px; height: calc(100vh - 72px); overflow-y: auto; }
+.admin-brand { padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.admin-brand strong { color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 16px; }
+.admin-nav { flex: 1; padding: 16px 0; }
+.admin-nav-link { display: block; padding: 12px 20px; color: rgba(255,255,255,0.7); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 500; transition: all var(--transition); border-left: 3px solid transparent; }
+.admin-nav-link:hover, .admin-nav-link.active { color: #fff; background: rgba(255,255,255,0.1); border-left-color: var(--gold); }
+.admin-logout { padding: 16px 20px; background: none; border: none; color: rgba(255,255,255,0.5); font-family: 'Montserrat', sans-serif; font-size: 13px; cursor: pointer; text-align: left; transition: color var(--transition); }
+.admin-logout:hover { color: #fff; }
+.admin-main { background: var(--grey-bg); padding: 32px; overflow-y: auto; }
+.admin-tab { display: none; }
+.admin-tab.active { display: block; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.admin-header h2 { font-size: 22px; }
+.admin-date { font-size: 13px; color: var(--grey-mid); }
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.kpi-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.kpi-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 4px; }
+.kpi-icon.blue { background: rgba(10,61,145,0.1); }
+.kpi-icon.gold { background: rgba(242,183,5,0.15); }
+.kpi-info { display: flex; flex-direction: column; }
+.kpi-num { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; color: var(--blue); line-height: 1; }
+.kpi-label { font-size: 13px; color: var(--grey-mid); margin-top: 2px; }
+.kpi-change { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; }
+.kpi-change.up { color: #16a34a; }
+.kpi-change.down { color: #dc2626; }
+.admin-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.admin-panel { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.admin-panel h3 { font-size: 16px; margin-bottom: 16px; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.admin-table.full { font-size: 14px; }
+.admin-table th { text-align: left; padding: 10px 12px; background: var(--grey-bg); color: var(--grey-mid); font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-table td { padding: 12px 12px; border-bottom: 1px solid var(--border); color: var(--grey); }
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: rgba(10,61,145,0.03); }
+.status-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+.status-active { background: rgba(22,163,74,0.1); color: #15803d; }
+.status-pending { background: rgba(234,179,8,0.15); color: #a16207; }
+.status-closed { background: rgba(239,68,68,0.1); color: #dc2626; }
+.status-new { background: rgba(10,61,145,0.1); color: var(--blue); }
+.status-placed { background: rgba(22,163,74,0.15); color: #15803d; }
+.status-interview { background: rgba(168,85,247,0.1); color: #7c3aed; }
+
+/* ===== MODAL ===== */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.modal-box { background: #fff; border-radius: 16px; padding: 32px; width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.modal-header h3 { font-size: 20px; }
+.modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--grey-mid); padding: 4px; }
+.modal-form { display: flex; flex-direction: column; gap: 16px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+
+/* ===== FOOTER ===== */
+.site-footer { background: #0d1117; }
+.footer-top { padding: 64px 0; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; }
+.footer-brand { display: flex; flex-direction: column; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: #fff; }
+.footer-brand p { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.7; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 12px; font-family: 'Montserrat', sans-serif; font-weight: 700; transition: all var(--transition); }
+.footer-social a:hover { background: var(--gold); color: var(--blue); }
+.footer-links { display: flex; flex-direction: column; gap: 4px; }
+.footer-links h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: 0.5px; }
+.footer-links a { color: rgba(255,255,255,0.5); font-size: 14px; padding: 4px 0; transition: color var(--transition); }
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; }
+.footer-bottom p { color: rgba(255,255,255,0.35); font-size: 13px; text-align: center; }
+
+/* ===== TOAST ===== */
+.toast { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--blue); color: #fff; padding: 14px 28px; border-radius: 100px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; z-index: 3000; transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 8px 32px rgba(10,61,145,0.4); }
+.toast.show { transform: translateX(-50%) translateY(0); }
+.toast.success { background: #15803d; }
+.toast.error { background: #dc2626; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .why-inner { grid-template-columns: 1fr; gap: 48px; }
+  .employer-layout { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr; max-width: 480px; margin: 40px auto 0; }
+  .about-intro { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar { height: auto; position: relative; top: auto; flex-direction: row; flex-wrap: wrap; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .jobs-layout { grid-template-columns: 1fr; }
+  .jobs-sidebar { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px; border-bottom: 1px solid var(--border); box-shadow: var(--shadow); gap: 0; }
+  .nav-links.open { display: flex; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .search-box { flex-direction: column; border-radius: 12px; }
+  .search-field { border-right: none; border-bottom: 1px solid var(--border); width: 100%; }
+  .search-divider { display: none; }
+  .search-btn { width: 100%; padding: 16px; }
+  .hero-stats { gap: 20px; }
+  .stat-divider { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .admin-two-col { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; text-align: center; }
+  .jobs-sidebar { grid-template-columns: 1fr; }
+  .section-header-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .admin-sidebar { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" onclick="showPage('home')">
+      <div class="logo-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="16" stroke="#F2B705" stroke-width="2" fill="none"/>
+          <circle cx="18" cy="18" r="3" fill="#F2B705"/>
+          <circle cx="8" cy="12" r="2.5" fill="#F2B705"/>
+          <circle cx="28" cy="12" r="2.5" fill="#F2B705"/>
+          <circle cx="8" cy="24" r="2.5" fill="#F2B705"/>
+          <circle cx="28" cy="24" r="2.5" fill="#F2B705"/>
+          <circle cx="18" cy="5" r="2.5" fill="#F2B705"/>
+          <circle cx="18" cy="31" r="2.5" fill="#F2B705"/>
+          <line x1="18" y1="18" x2="8" y2="12" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="18" y1="18" x2="28" y2="12" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="18" y1="18" x2="8" y2="24" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="18" y1="18" x2="28" y2="24" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="18" y1="18" x2="18" y2="5" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="18" y1="18" x2="18" y2="31" stroke="#F2B705" stroke-width="1.2" opacity="0.7"/>
+          <line x1="8" y1="12" x2="18" y2="5" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+          <line x1="28" y1="12" x2="18" y2="5" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+          <line x1="8" y1="24" x2="18" y2="31" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+          <line x1="28" y1="24" x2="18" y2="31" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+          <line x1="8" y1="12" x2="8" y2="24" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+          <line x1="28" y1="12" x2="28" y2="24" stroke="#F2B705" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">Global Linkers</span>
+        <span class="logo-sub">Recruitment & HR Services</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">Home</a></li>
+      <li><a href="#" onclick="showPage('jobs')" class="nav-link" data-page="jobs">Find Jobs</a></li>
+      <li><a href="#" onclick="showPage('employers')" class="nav-link" data-page="employers">For Employers</a></li>
+      <li><a href="#" onclick="showPage('about')" class="nav-link" data-page="about">About</a></li>
+      <li><a href="#" onclick="showPage('contact')" class="nav-link" data-page="contact">Contact</a></li>
+      <li><a href="#" onclick="showPage('admin')" class="nav-link nav-admin" data-page="admin">Admin</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn-outline" onclick="showPage('jobs')">Find Jobs</button>
+      <button class="btn-primary" onclick="showPage('employers')">Hire Talent</button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PAGE: HOME ===== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="network-lines">
+        <svg class="network-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F2B705" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#F2B705" stop-opacity="0.3"/>
+            </radialGradient>
+          </defs>
+          <line x1="200" y1="150" x2="600" y2="350" stroke="#F2B705" stroke-width="1" opacity="0.2" class="net-line"/>
+          <line x1="900" y1="100" x2="600" y2="350" stroke="#F2B705" stroke-width="1" opacity="0.2" class="net-line"/>
+          <line x1="100" y1="500" x2="600" y2="350" stroke="#F2B705" stroke-width="1" opacity="0.15" class="net-line"/>
+          <line x1="1100" y1="450" x2="600" y2="350" stroke="#F2B705" stroke-width="1" opacity="0.15" class="net-line"/>
+          <line x1="400" y1="600" x2="600" y2="350" stroke="#F2B705" stroke-width="1" opacity="0.15" class="net-line"/>
+          <line x1="200" y1="150" x2="900" y2="100" stroke="#F2B705" stroke-width="0.8" opacity="0.1"/>
+          <line x1="200" y1="150" x2="100" y2="500" stroke="#F2B705" stroke-width="0.8" opacity="0.1"/>
+          <line x1="900" y1="100" x2="1100" y2="450" stroke="#F2B705" stroke-width="0.8" opacity="0.1"/>
+          <circle cx="600" cy="350" r="8" fill="url(#nodeGrad)" class="pulse-node"/>
+          <circle cx="200" cy="150" r="5" fill="#F2B705" opacity="0.6" class="pulse-node-sm"/>
+          <circle cx="900" cy="100" r="5" fill="#F2B705" opacity="0.6" class="pulse-node-sm"/>
+          <circle cx="100" cy="500" r="4" fill="#F2B705" opacity="0.4" class="pulse-node-sm"/>
+          <circle cx="1100" cy="450" r="4" fill="#F2B705" opacity="0.4" class="pulse-node-sm"/>
+          <circle cx="400" cy="600" r="4" fill="#F2B705" opacity="0.4" class="pulse-node-sm"/>
+          <circle cx="750" cy="250" r="3" fill="#F2B705" opacity="0.3"/>
+          <circle cx="350" cy="420" r="3" fill="#F2B705" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Nigeria's Premier Recruitment Platform
+      </div>
+      <h1 class="hero-title">
+        Connecting <span class="text-gold">Talent</span><br/>
+        to <span class="text-gold">Opportunity</span>
+      </h1>
+      <p class="hero-subtitle">
+        Global Linkers Ltd bridges skilled professionals with forward-thinking organizations through reliable, ethical, and efficient workforce solutions — locally rooted, globally minded.
+      </p>
+      <div class="hero-search">
+        <div class="search-box">
+          <div class="search-field">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" placeholder="Job title, skills, or keywords..." id="heroSearch"/>
+          </div>
+          <div class="search-divider"></div>
+          <div class="search-field">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <input type="text" placeholder="Location" id="heroLocation"/>
+          </div>
+          <button class="search-btn" onclick="doHeroSearch()">Search Jobs</button>
+        </div>
+        <div class="search-tags">
+          <span>Popular:</span>
+          <a href="#" onclick="quickSearch('Data Analyst')">Data Analyst</a>
+          <a href="#" onclick="quickSearch('HR Manager')">HR Manager</a>
+          <a href="#" onclick="quickSearch('Software Engineer')">Software Engineer</a>
+          <a href="#" onclick="quickSearch('Finance')">Finance</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">2,400+</span><span class="stat-label">Active Jobs</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">850+</span><span class="stat-label">Companies</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">15,000+</span><span class="stat-label">Placements</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfaction Rate</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">End-to-End HR <span class="text-gold">Solutions</span></h2>
+      <p class="section-subtitle">From talent acquisition to workforce management — we handle every dimension of your HR needs.</p>
+      <div class="services-grid">
+        <div class="service-card" style="--delay:0s">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Talent Acquisition</h3>
+          <p>End-to-end recruitment for entry-level to C-suite positions across all industries. We source, screen, and deliver the right fit.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+        <div class="service-card featured" style="--delay:0.1s">
+          <div class="service-badge-tag">Most Popular</div>
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Workforce Outsourcing</h3>
+          <p>Flexible staffing solutions including contract, temporary, and permanent placements. Scale your workforce with confidence.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+        <div class="service-card" style="--delay:0.2s">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>HR Consulting</h3>
+          <p>Strategic HR advisory, policy development, performance management systems, and organizational design for growing businesses.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+        <div class="service-card" style="--delay:0.3s">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Executive Search</h3>
+          <p>Confidential headhunting for senior leadership roles. Access our network of pre-vetted executives and industry leaders.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+        <div class="service-card" style="--delay:0.4s">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Background Verification</h3>
+          <p>Comprehensive pre-employment checks including academic, professional, criminal, and reference verification services.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+        <div class="service-card" style="--delay:0.5s">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Payroll Management</h3>
+          <p>Seamless payroll administration, statutory compliance, benefits management, and employee records for outsourced staff.</p>
+          <a href="#" class="service-link" onclick="showPage('employers')">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED JOBS PREVIEW -->
+  <section class="featured-jobs-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-label">Opportunities</div>
+          <h2 class="section-title">Featured <span class="text-gold">Jobs</span></h2>
+        </div>
+        <button class="btn-outline-blue" onclick="showPage('jobs')">View All Jobs →</button>
+      </div>
+      <div class="jobs-preview-grid" id="featuredJobsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-left">
+          <div class="section-label light">Why Global Linkers</div>
+          <h2 class="section-title light">Built on <span class="text-gold">Trust</span> &<br/>Driven by <span class="text-gold">Results</span></h2>
+          <p class="why-desc">With deep roots in Nigeria's talent market and a global mindset, we don't just fill positions — we build careers and transform organizations.</p>
+          <div class="values-list">
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <div>
+                <strong>Integrity First</strong>
+                <p>Transparent processes, honest communication at every engagement.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <div>
+                <strong>People-Centric</strong>
+                <p>We see candidates as people, not profiles. Every placement matters.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-dot"></div>
+              <div>
+                <strong>Global Mindset</strong>
+                <p>Africa-rooted expertise with international standards and reach.</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn-gold" onclick="showPage('about')">Our Story →</button>
+        </div>
+        <div class="why-right">
+          <div class="metrics-card">
+            <div class="metric-row">
+              <div class="metric-box">
+                <span class="metric-big">25+</span>
+                <span class="metric-label">Years Combined Experience</span>
+              </div>
+              <div class="metric-box gold">
+                <span class="metric-big">98%</span>
+                <span class="metric-label">Client Retention Rate</span>
+              </div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-box gold">
+                <span class="metric-big">72h</span>
+                <span class="metric-label">Average Time-to-Shortlist</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-big">36</span>
+                <span class="metric-label">Industries Served</span>
+              </div>
+            </div>
+            <div class="testimonial-mini">
+              <p>"Global Linkers delivered top-tier candidates within 5 days. Exceptional service, true professionals."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">OA</div>
+                <div><strong>Oluwaseun Adeyemi</strong><br/><small>HR Director, Zenith Bank</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Ready to Find Your Next Great Hire?</h2>
+          <p>Post a job today and access our network of 50,000+ pre-vetted professionals.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-gold-large" onclick="showPage('employers')">Post a Job — It's Free</button>
+          <button class="btn-white-outline" onclick="showPage('jobs')">Browse Talent Pool</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="section-label center">Trusted By</div>
+      <div class="partners-strip">
+        <div class="partner-logo">Shell Nigeria</div>
+        <div class="partner-logo">Zenith Bank</div>
+        <div class="partner-logo">MTN Nigeria</div>
+        <div class="partner-logo">Dangote Group</div>
+        <div class="partner-logo">Access Bank</div>
+        <div class="partner-logo">Total Energies</div>
+        <div class="partner-logo">NNPC</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ===== PAGE: JOBS ===== -->
+<div id="page-jobs" class="page">
+  <div class="page-hero-mini">
+    <div class="container">
+      <div class="section-label light">Opportunities Await</div>
+      <h1>Find Your <span class="text-gold">Perfect Role</span></h1>
+      <p>Explore thousands of verified job opportunities across Nigeria and beyond.</p>
+    </div>
+  </div>
+  <section class="jobs-main">
+    <div class="container">
+      <!-- Search bar -->
+      <div class="jobs-search-bar">
+        <div class="jsb-field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Job title or keywords..." id="jobSearch" oninput="filterJobs()"/>
+        </div>
+        <div class="jsb-field">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <input type="text" placeholder="Location..." id="locationSearch" oninput="filterJobs()"/>
+        </div>
+        <select id="categoryFilter" onchange="filterJobs()">
+          <option value="">All Categories</option>
+          <option>Technology</option>
+          <option>Finance</option>
+          <option>Human Resources</option>
+          <option>Engineering</option>
+          <option>Marketing</option>
+          <option>Sales</option>
+          <option>Healthcare</option>
+          <option>Operations</option>
+        </select>
+        <select id="typeFilter" onchange="filterJobs()">
+          <option value="">All Types</option>
+          <option>Full-time</option>
+          <option>Part-time</option>
+          <option>Contract</option>
+          <option>Remote</option>
+        </select>
+        <button class="btn-primary" onclick="filterJobs()">Search</button>
+      </div>
+
+      <div class="jobs-layout">
+        <!-- Sidebar filters -->
+        <aside class="jobs-sidebar">
+          <div class="filter-block">
+            <h4>Experience Level</h4>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> Entry Level</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> Mid Level</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> Senior Level</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> Executive</label>
+          </div>
+          <div class="filter-block">
+            <h4>Salary Range</h4>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> ₦100k – ₦300k/mo</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> ₦300k – ₦600k/mo</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> ₦600k – ₦1M/mo</label>
+            <label class="check-item"><input type="checkbox" onchange="filterJobs()"> ₦1M+/mo</label>
+          </div>
+          <div class="filter-block">
+            <h4>Date Posted</h4>
+            <label class="check-item"><input type="radio" name="date" onchange="filterJobs()"> Last 24 hours</label>
+            <label class="check-item"><input type="radio" name="date" onchange="filterJobs()"> Last 7 days</label>
+            <label class="check-item"><input type="radio" name="date" onchange="filterJobs()"> Last 30 days</label>
+          </div>
+          <div class="filter-block highlight-box">
+            <h4>🔔 Job Alerts</h4>
+            <p>Get notified when new jobs match your criteria</p>
+            <input type="email" placeholder="Your email address" class="alert-input"/>
+            <button class="btn-primary full-w">Set Alert</button>
+          </div>
+        </aside>
+
+        <!-- Jobs list -->
+        <div class="jobs-content">
+          <div class="jobs-meta-bar">
+            <span id="jobCount">Loading jobs...</span>
+            <select id="sortJobs" onchange="filterJobs()">
+              <option>Most Recent</option>
+              <option>Most Relevant</option>
+              <option>Salary: High to Low</option>
+            </select>
+          </div>
+          <div class="jobs-list" id="jobsList"></div>
+          <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-jobs -->
+
+
+<!-- ===== PAGE: EMPLOYERS ===== -->
+<div id="page-employers" class="page">
+  <div class="page-hero-mini">
+    <div class="container">
+      <div class="section-label light">For Employers</div>
+      <h1>Hire <span class="text-gold">Exceptional Talent</span><br/>Faster</h1>
+      <p>Let Global Linkers connect you with pre-screened professionals who are ready to contribute from day one.</p>
+    </div>
+  </div>
+
+  <section class="employers-main">
+    <div class="container">
+      <!-- Post job form -->
+      <div class="employer-layout">
+        <div class="employer-form-wrap">
+          <h2>Post a Job Vacancy</h2>
+          <p class="form-intro">Fill in the details below and our team will start sourcing candidates within 24 hours.</p>
+          <form class="post-job-form" onsubmit="submitJob(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Company Name *</label>
+                <input type="text" placeholder="e.g. Acme Corporation" required/>
+              </div>
+              <div class="form-group">
+                <label>Industry *</label>
+                <select required>
+                  <option value="">Select industry</option>
+                  <option>Oil & Gas</option>
+                  <option>Banking & Finance</option>
+                  <option>Technology</option>
+                  <option>Healthcare</option>
+                  <option>Manufacturing</option>
+                  <option>Telecoms</option>
+                  <option>FMCG</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Job Title *</label>
+                <input type="text" placeholder="e.g. Senior Data Analyst" required/>
+              </div>
+              <div class="form-group">
+                <label>Department</label>
+                <input type="text" placeholder="e.g. Finance & Analytics"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Employment Type *</label>
+                <select required>
+                  <option value="">Select type</option>
+                  <option>Full-time</option>
+                  <option>Part-time</option>
+                  <option>Contract</option>
+                  <option>Temporary</option>
+                  <option>Remote</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Location *</label>
+                <input type="text" placeholder="e.g. Lagos Island, Lagos" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Salary Range (Monthly ₦)</label>
+                <input type="text" placeholder="e.g. 400,000 – 600,000"/>
+              </div>
+              <div class="form-group">
+                <label>Experience Required *</label>
+                <select required>
+                  <option value="">Select level</option>
+                  <option>0–1 year</option>
+                  <option>2–3 years</option>
+                  <option>4–6 years</option>
+                  <option>7–10 years</option>
+                  <option>10+ years</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Job Description *</label>
+              <textarea placeholder="Describe responsibilities, requirements, qualifications, and what makes this role exciting..." required rows="5"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Contact Name *</label>
+                <input type="text" placeholder="HR Manager's name" required/>
+              </div>
+              <div class="form-group">
+                <label>Contact Email *</label>
+                <input type="email" placeholder="hr@company.com" required/>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Contact Phone</label>
+              <input type="tel" placeholder="+234 800 000 0000"/>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary large">Submit Job Vacancy</button>
+              <p class="form-note">Our team reviews all submissions within 2 business hours. We'll contact you to confirm and begin sourcing.</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="employer-sidebar">
+          <div class="emp-benefit-card">
+            <h3>Why Hire Through Us?</h3>
+            <div class="benefit-item">
+              <div class="benefit-icon">⚡</div>
+              <div><strong>Speed</strong><p>Shortlist of qualified candidates within 72 hours of your request.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✅</div>
+              <div><strong>Pre-screened</strong><p>Every candidate is assessed, background-checked, and reference-verified.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🎯</div>
+              <div><strong>Precision Matching</strong><p>We go beyond CV-matching — culture fit and growth potential included.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔄</div>
+              <div><strong>Replacement Guarantee</strong><p>Free replacement within 90 days if a placement doesn't work out.</p></div>
+            </div>
+          </div>
+          <div class="emp-contact-card">
+            <h4>Talk to a Consultant</h4>
+            <p>Prefer a consultation first? Our HR experts are ready to help.</p>
+            <a href="tel:+2348000000000" class="btn-outline-blue full-w">📞 Call Us Now</a>
+            <a href="#" onclick="showPage('contact')" class="btn-primary full-w" style="margin-top:10px;">Send a Message</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packages -->
+      <div class="packages-section">
+        <h2 class="text-center">Our <span class="text-gold">Service Packages</span></h2>
+        <p class="text-center section-subtitle">Flexible plans designed for organizations of all sizes.</p>
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="pkg-header">
+              <h3>Starter</h3>
+              <div class="pkg-price">Contact Us</div>
+              <p>For SMEs and startups making their first hire</p>
+            </div>
+            <ul class="pkg-features">
+              <li>✓ Up to 3 job postings/month</li>
+              <li>✓ CV sourcing & screening</li>
+              <li>✓ Shortlist of top 5 candidates</li>
+              <li>✓ Basic background check</li>
+              <li>✓ 30-day replacement guarantee</li>
+            </ul>
+            <button class="btn-outline-blue full-w" onclick="showPage('contact')">Get Started</button>
+          </div>
+          <div class="package-card featured">
+            <div class="pkg-badge">Most Popular</div>
+            <div class="pkg-header">
+              <h3>Professional</h3>
+              <div class="pkg-price">Contact Us</div>
+              <p>For growing companies with ongoing recruitment needs</p>
+            </div>
+            <ul class="pkg-features">
+              <li>✓ Unlimited job postings</li>
+              <li>✓ Dedicated recruitment consultant</li>
+              <li>✓ Executive & specialist search</li>
+              <li>✓ Full background verification</li>
+              <li>✓ 60-day replacement guarantee</li>
+              <li>✓ HR advisory support</li>
+            </ul>
+            <button class="btn-primary full-w" onclick="showPage('contact')">Get Started</button>
+          </div>
+          <div class="package-card">
+            <div class="pkg-header">
+              <h3>Enterprise</h3>
+              <div class="pkg-price">Custom</div>
+              <p>For large organizations with complex workforce needs</p>
+            </div>
+            <ul class="pkg-features">
+              <li>✓ Full RPO (Recruitment Process Outsourcing)</li>
+              <li>✓ Dedicated on-site HR team</li>
+              <li>✓ Payroll & compliance management</li>
+              <li>✓ Executive headhunting</li>
+              <li>✓ 90-day replacement guarantee</li>
+              <li>✓ Quarterly HR strategy review</li>
+            </ul>
+            <button class="btn-outline-blue full-w" onclick="showPage('contact')">Talk to Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-employers -->
+
+
+<!-- ===== PAGE: ABOUT ===== -->
+<div id="page-about" class="page">
+  <div class="page-hero-mini">
+    <div class="container">
+      <div class="section-label light">Our Story</div>
+      <h1>Driven by <span class="text-gold">Purpose</span>,<br/>Built on <span class="text-gold">People</span></h1>
+    </div>
+  </div>
+  <section class="about-main">
+    <div class="container">
+      <div class="about-intro">
+        <div class="about-text">
+          <h2>Who We Are</h2>
+          <p>Global Linkers Limited is a professional recruitment and HR services company headquartered in Nigeria, with a global reach and a people-first philosophy. We exist to bridge the gap between exceptional talent and forward-thinking organizations.</p>
+          <p>Founded on the belief that the right placement changes lives — not just careers — we operate with unwavering commitment to integrity, excellence, and efficiency. We serve SMEs, large enterprises, multinationals, and government entities across 36+ industries.</p>
+          <p>Our brand promise is simple: we link the right people to the right opportunities — every time.</p>
+        </div>
+        <div class="about-visual">
+          <div class="about-card-grid">
+            <div class="about-mini-card blue">
+              <strong>Vision</strong>
+              <p>Leading recruitment & HR solutions company in Africa</p>
+            </div>
+            <div class="about-mini-card gold">
+              <strong>Mission</strong>
+              <p>Reliable, ethical, efficient workforce solutions</p>
+            </div>
+            <div class="about-mini-card white">
+              <strong>Promise</strong>
+              <p>Professionalism, integrity & precision — always</p>
+            </div>
+            <div class="about-mini-card dark">
+              <strong>Essence</strong>
+              <p>Connecting Talent to Opportunity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-section">
+        <h2 class="text-center">Our Core <span class="text-gold">Values</span></h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-num">01</div>
+            <h3>Integrity</h3>
+            <p>We operate with transparency and honesty in all engagements — with clients, candidates, and partners.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-num">02</div>
+            <h3>Excellence</h3>
+            <p>We pursue quality and accuracy in every talent placement and HR solution we deliver.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-num">03</div>
+            <h3>People-Centricity</h3>
+            <p>People are at the heart of everything we do. We see beyond the CV to the human behind it.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-num">04</div>
+            <h3>Efficiency</h3>
+            <p>We value speed, structure, and effectiveness — delivering results without sacrificing quality.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-num">05</div>
+            <h3>Global Mindset</h3>
+            <p>We think beyond borders while acting locally — bringing world-class practices to African markets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-about -->
+
+
+<!-- ===== PAGE: CONTACT ===== -->
+<div id="page-contact" class="page">
+  <div class="page-hero-mini">
+    <div class="container">
+      <div class="section-label light">Get In Touch</div>
+      <h1>Let's Start a <span class="text-gold">Conversation</span></h1>
+      <p>Whether you're hiring, job-seeking, or just curious — we're here to help.</p>
+    </div>
+  </div>
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-form-wrap">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form" onsubmit="submitContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Your full name" required/>
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="you@email.com" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+234 800 000 0000"/>
+              </div>
+              <div class="form-group">
+                <label>I Am A *</label>
+                <select required>
+                  <option value="">Select...</option>
+                  <option>Job Seeker</option>
+                  <option>Employer / HR Manager</option>
+                  <option>Corporate Client</option>
+                  <option>Partner</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Subject *</label>
+              <input type="text" placeholder="What is your enquiry about?" required/>
+            </div>
+            <div class="form-group full">
+              <label>Message *</label>
+              <textarea placeholder="Tell us more about how we can help..." rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary large">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Head Office</strong><p>Victoria Island, Lagos, Nigeria</p></div>
+            </div>
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+              <div><strong>Phone</strong><p>+234 800 000 0000</p></div>
+            </div>
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div><strong>Email</strong><p>info@globallinkers.ng</p></div>
+            </div>
+            <div class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A3D91" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div><strong>Office Hours</strong><p>Mon–Fri: 8am – 6pm WAT</p></div>
+            </div>
+            <div class="social-links">
+              <h4>Follow Us</h4>
+              <div class="social-row">
+                <a href="#" class="social-btn">in</a>
+                <a href="#" class="social-btn">tw</a>
+                <a href="#" class="social-btn">fb</a>
+                <a href="#" class="social-btn">ig</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-contact -->
+
+
+<!-- ===== PAGE: ADMIN ===== -->
+<div id="page-admin" class="page">
+  <div id="admin-login" class="admin-login-wrap">
+    <div class="admin-login-box">
+      <div class="admin-logo">
+        <svg width="48" height="48" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="16" stroke="#F2B705" stroke-width="2" fill="none"/>
+          <circle cx="18" cy="18" r="3" fill="#F2B705"/>
+          <circle cx="8" cy="12" r="2.5" fill="#F2B705"/>
+          <circle cx="28" cy="12" r="2.5" fill="#F2B705"/>
+          <circle cx="8" cy="24" r="2.5" fill="#F2B705"/>
+          <circle cx="28" cy="24" r="2.5" fill="#F2B705"/>
+          <line x1="18" y1="18" x2="8" y2="12" stroke="#F2B705" stroke-width="1.2"/>
+          <line x1="18" y1="18" x2="28" y2="12" stroke="#F2B705" stroke-width="1.2"/>
+          <line x1="18" y1="18" x2="8" y2="24" stroke="#F2B705" stroke-width="1.2"/>
+          <line x1="18" y1="18" x2="28" y2="24" stroke="#F2B705" stroke-width="1.2"/>
+        </svg>
+        <h2>Admin Portal</h2>
+        <p>Global Linkers Ltd</p>
+      </div>
+      <form onsubmit="adminLogin(event)">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="adminUser" placeholder="admin@globallinkers.ng" value="admin"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="adminPass" placeholder="••••••••" value="admin123"/>
+        </div>
+        <button type="submit" class="btn-primary large full-w">Sign In</button>
+        <p class="login-hint">Demo: admin / admin123</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="admin-dashboard" style="display:none;">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <strong>GL Admin</strong>
+        </div>
+        <nav class="admin-nav">
+          <a href="#" class="admin-nav-link active" onclick="showAdminTab('overview', this)">📊 Overview</a>
+          <a href="#" class="admin-nav-link" onclick="showAdminTab('jobs', this)">💼 Job Listings</a>
+          <a href="#" class="admin-nav-link" onclick="showAdminTab('candidates', this)">👤 Candidates</a>
+          <a href="#" class="admin-nav-link" onclick="showAdminTab('employers', this)">🏢 Employers</a>
+          <a href="#" class="admin-nav-link" onclick="showAdminTab('enquiries', this)">📩 Enquiries</a>
+          <a href="#" class="admin-nav-link" onclick="showAdminTab('placements', this)">🎯 Placements</a>
+        </nav>
+        <button class="admin-logout" onclick="adminLogout()">⬅ Logout</button>
+      </aside>
+
+      <main class="admin-main">
+        <!-- Overview tab -->
+        <div id="admin-tab-overview" class="admin-tab active">
+          <div class="admin-header"><h2>Dashboard Overview</h2><span class="admin-date" id="adminDate"></span></div>
+          <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-icon blue">💼</div><div class="kpi-info"><span class="kpi-num">47</span><span class="kpi-label">Active Jobs</span></div><span class="kpi-change up">+8 this week</span></div>
+            <div class="kpi-card"><div class="kpi-icon gold">👤</div><div class="kpi-info"><span class="kpi-num">312</span><span class="kpi-label">New Candidates</span></div><span class="kpi-change up">+24 today</span></div>
+            <div class="kpi-card"><div class="kpi-icon blue">🏢</div><div class="kpi-info"><span class="kpi-num">28</span><span class="kpi-label">Active Clients</span></div><span class="kpi-change up">+3 this month</span></div>
+            <div class="kpi-card"><div class="kpi-icon gold">🎯</div><div class="kpi-info"><span class="kpi-num">89</span><span class="kpi-label">Placements (YTD)</span></div><span class="kpi-change up">+12 this month</span></div>
+            <div class="kpi-card"><div class="kpi-icon blue">📩</div><div class="kpi-info"><span class="kpi-num">14</span><span class="kpi-label">Pending Enquiries</span></div><span class="kpi-change down">-2 today</span></div>
+            <div class="kpi-card"><div class="kpi-icon gold">⭐</div><div class="kpi-info"><span class="kpi-num">4.9</span><span class="kpi-label">Avg Client Rating</span></div><span class="kpi-change up">+0.1 this month</span></div>
+          </div>
+
+          <div class="admin-two-col">
+            <div class="admin-panel">
+              <h3>Recent Applications</h3>
+              <table class="admin-table">
+                <thead><tr><th>Candidate</th><th>Role</th><th>Status</th></tr></thead>
+                <tbody id="recentAppsTable"></tbody>
+              </table>
+            </div>
+            <div class="admin-panel">
+              <h3>Recent Employer Requests</h3>
+              <table class="admin-table">
+                <thead><tr><th>Company</th><th>Role</th><th>Urgency</th></tr></thead>
+                <tbody id="recentRequestsTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jobs tab -->
+        <div id="admin-tab-jobs" class="admin-tab">
+          <div class="admin-header">
+            <h2>Job Listings</h2>
+            <button class="btn-primary" onclick="showAddJobModal()">+ Add New Job</button>
+          </div>
+          <div class="admin-panel">
+            <table class="admin-table full">
+              <thead><tr><th>Title</th><th>Company</th><th>Location</th><th>Type</th><th>Status</th><th>Posted</th><th>Actions</th></tr></thead>
+              <tbody id="adminJobsTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Candidates tab -->
+        <div id="admin-tab-candidates" class="admin-tab">
+          <div class="admin-header"><h2>Candidate Pool</h2></div>
+          <div class="admin-panel">
+            <table class="admin-table full">
+              <thead><tr><th>Name</th><th>Role</th><th>Experience</th><th>Location</th><th>Status</th><th>Applied</th></tr></thead>
+              <tbody id="adminCandidatesTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Employers tab -->
+        <div id="admin-tab-employers" class="admin-tab">
+          <div class="admin-header"><h2>Employer Accounts</h2></div>
+          <div class="admin-panel">
+            <table class="admin-table full">
+              <thead><tr><th>Company</th><th>Industry</th><th>Contact</th><th>Open Roles</th><th>Since</th><th>Status</th></tr></thead>
+              <tbody id="adminEmployersTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Enquiries tab -->
+        <div id="admin-tab-enquiries" class="admin-tab">
+          <div class="admin-header"><h2>Enquiries & Messages</h2></div>
+          <div class="admin-panel">
+            <table class="admin-table full">
+              <thead><tr><th>Name</th><th>Type</th><th>Subject</th><th>Date</th><th>Status</th></tr></thead>
+              <tbody id="adminEnquiriesTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Placements tab -->
+        <div id="admin-tab-placements" class="admin-tab">
+          <div class="admin-header"><h2>Placements Tracker</h2></div>
+          <div class="admin-panel">
+            <table class="admin-table full">
+              <thead><tr><th>Candidate</th><th>Company</th><th>Role</th><th>Start Date</th><th>Type</th><th>Status</th></tr></thead>
+              <tbody id="adminPlacementsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div><!-- /page-admin -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="16" stroke="#F2B705" stroke-width="2" fill="none"/>
+              <circle cx="18" cy="18" r="3" fill="#F2B705"/>
+              <circle cx="8" cy="12" r="2.5" fill="#F2B705"/>
+              <circle cx="28" cy="12" r="2.5" fill="#F2B705"/>
+              <line x1="18" y1="18" x2="8" y2="12" stroke="#F2B705" stroke-width="1.2"/>
+              <line x1="18" y1="18" x2="28" y2="12" stroke="#F2B705" stroke-width="1.2"/>
+              <line x1="18" y1="18" x2="18" y2="5" stroke="#F2B705" stroke-width="1.2"/>
+            </svg>
+            <span>Global Linkers Ltd</span>
+          </div>
+          <p>Connecting Talent to Opportunity, and Businesses to People. Nigeria's premier recruitment and HR services partner.</p>
+          <div class="footer-social">
+            <a href="#">in</a><a href="#">tw</a><a href="#">fb</a><a href="#">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>For Job Seekers</h4>
+          <a href="#" onclick="showPage('jobs')">Browse Jobs</a>
+          <a href="#">Upload CV</a>
+          <a href="#">Career Resources</a>
+          <a href="#">Salary Guide</a>
+          <a href="#">Job Alerts</a>
+        </div>
+        <div class="footer-links">
+          <h4>For Employers</h4>
+          <a href="#" onclick="showPage('employers')">Post a Job</a>
+          <a href="#">Talent Search</a>
+          <a href="#">HR Consulting</a>
+          <a href="#">Workforce Outsourcing</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#" onclick="showPage('about')">About Us</a>
+          <a href="#">Our Team</a>
+          <a href="#" onclick="showPage('contact')">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 Global Linkers Limited. All rights reserved. | Recruitment & HR Services | Lagos, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div id="toast" class="toast"></div>
+
+<!-- Add Job Modal -->
+<div id="addJobModal" class="modal-overlay" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Add New Job</h3>
+      <button onclick="closeModal()" class="modal-close">✕</button>
+    </div>
+    <form onsubmit="addNewJob(event)" class="modal-form">
+      <div class="form-row">
+        <div class="form-group"><label>Job Title *</label><input type="text" id="mJobTitle" required/></div>
+        <div class="form-group"><label>Company *</label><input type="text" id="mJobCompany" required/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Location *</label><input type="text" id="mJobLocation" required/></div>
+        <div class="form-group">
+          <label>Type *</label>
+          <select id="mJobType" required>
+            <option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Category</label><input type="text" id="mJobCategory" placeholder="e.g. Technology"/></div>
+        <div class="form-group"><label>Salary</label><input type="text" id="mJobSalary" placeholder="e.g. ₦400k–₦600k"/></div>
+      </div>
+      <div class="form-group full"><label>Description</label><textarea id="mJobDesc" rows="4"></textarea></div>
+      <div class="modal-actions">
+        <button type="button" class="btn-outline-blue" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="btn-primary">Add Job</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>/* ===== GLOBAL LINKERS LTD — APP.JS (Live API Edition) ===== */
+
+const API = 'https://globallinkers-api-production.up.railway.app/api';
+
+const getToken = () => localStorage.getItem('gl_token');
+const setToken = (t) => localStorage.setItem('gl_token', t);
+const clearToken = () => localStorage.removeItem('gl_token');
+const authHeaders = () => ({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${getToken()}` });
+
+async function apiFetch(path, opts = {}) {
+  try {
+    const res = await fetch(API + path, opts);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+    return data;
+  } catch (err) { console.error('API error:', path, err.message); throw err; }
+}
+
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + page);
+  if (target) target.classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.page === page));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMenu();
+  if (page === 'jobs') loadJobs();
+}
+
+window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10));
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+function closeMenu() { document.getElementById('navLinks').classList.remove('open'); }
+function doHeroSearch() { const q = document.getElementById('heroSearch').value; document.getElementById('jobSearch').value = q; showPage('jobs'); }
+function quickSearch(q) { document.getElementById('jobSearch').value = q; showPage('jobs'); }
+
+async function loadFeaturedJobs() {
+  const grid = document.getElementById('featuredJobsGrid');
+  if (!grid) return;
+  grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:#999"><div style="font-size:32px;margin-bottom:8px">⏳</div>Loading featured jobs...</div>`;
+  try {
+    const { jobs } = await apiFetch('/jobs?featured=true&limit=6');
+    if (!jobs.length) { grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:#999">No featured jobs yet.</div>`; return; }
+    grid.innerHTML = jobs.map(job => `
+      <div class="job-preview-card" onclick="showPage('jobs')">
+        <div class="job-card-header">
+          <div class="job-company-logo" style="background:${job.logo_color||'#0A3D91'}">${job.logo_initials||'GL'}</div>
+          <span class="job-badge ${job.job_type==='Remote'?'remote':job.job_type==='Contract'?'contract':'full-time'}">${job.job_type}</span>
+        </div>
+        <div class="job-card-title">${job.title}</div>
+        <div class="job-card-company">${job.company}</div>
+        <div class="job-card-meta">
+          <span class="job-meta-item">📍 ${job.location}</span>
+          <span class="job-meta-item">🎯 ${job.experience||'Open'}</span>
+        </div>
+        <div class="job-card-footer">
+          <span class="job-card-salary">${job.salary_display||'Competitive'}</span>
+          <span class="job-card-date">${job.posted_display||'Recently'}</span>
+        </div>
+      </div>`).join('');
+  } catch (err) { grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:#999">Could not load jobs.</div>`; }
+}
+
+let currentPage = 1;
+
+async function loadJobs() {
+  const list = document.getElementById('jobsList');
+  const countEl = document.getElementById('jobCount');
+  if (!list) return;
+  const search = document.getElementById('jobSearch')?.value || '';
+  const location = document.getElementById('locationSearch')?.value || '';
+  const category = document.getElementById('categoryFilter')?.value || '';
+  const type = document.getElementById('typeFilter')?.value || '';
+  list.innerHTML = `<div style="text-align:center;padding:60px 0;color:#999"><div style="font-size:40px;margin-bottom:12px">⏳</div>Loading jobs...</div>`;
+  try {
+    const params = new URLSearchParams({ page: currentPage, limit: 10, ...(search && {search}), ...(location && {location}), ...(category && {category}), ...(type && {job_type: type}) });
+    const { jobs, pagination } = await apiFetch(`/jobs?${params}`);
+    countEl.textContent = `${pagination.total} job${pagination.total !== 1 ? 's' : ''} found`;
+    if (!jobs.length) { list.innerHTML = `<div style="text-align:center;padding:60px 0;color:var(--grey-mid)"><div style="font-size:48px;margin-bottom:16px">🔍</div><h3 style="font-family:Montserrat,sans-serif;color:var(--blue);margin-bottom:8px">No jobs found</h3><p>Try adjusting your search filters</p></div>`; return; }
+    list.innerHTML = jobs.map(job => `
+      <div class="job-list-card ${job.is_featured ? 'featured-job' : ''}" onclick="openJobDetail('${job.id}')">
+        <div class="jlc-logo" style="background:${job.logo_color||'#0A3D91'}">${job.logo_initials||'GL'}</div>
+        <div class="jlc-body">
+          <div class="jlc-title">${job.title} ${job.is_featured ? '<span class="jlc-tag blue" style="display:inline-block;margin-left:8px">⭐ Featured</span>' : ''}</div>
+          <div class="jlc-company">${job.company}</div>
+          <div class="jlc-tags"><span class="jlc-tag">${job.category||'General'}</span><span class="jlc-tag">${job.experience||'Open'}</span><span class="jlc-tag ${job.job_type==='Remote'?'blue':''}">${job.job_type}</span></div>
+          <div class="jlc-meta"><span>📍 ${job.location}</span><span>🕒 ${job.posted_display||'Recently'}</span><span>👥 ${job.applications_count||0} applicant${job.applications_count!==1?'s':''}</span></div>
+        </div>
+        <div class="jlc-right">
+          <span class="jlc-salary">${job.salary_display||'Competitive'}</span>
+          <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="event.stopPropagation();openApplyModal('${job.id}','${(job.title||'').replace(/'/g,"\\'")}','${(job.company||'').replace(/'/g,"\\'")}')">Apply Now</button>
+        </div>
+      </div>`).join('');
+    renderPagination(pagination);
+  } catch (err) { list.innerHTML = `<div style="text-align:center;padding:60px 0;color:#999"><div style="font-size:40px;margin-bottom:12px">⚠️</div>Could not load jobs. Please try again.</div>`; }
+}
+
+function filterJobs() { currentPage = 1; loadJobs(); }
+
+function renderPagination(pagination) {
+  const el = document.querySelector('.pagination');
+  if (!el || pagination.pages <= 1) { if (el) el.innerHTML = ''; return; }
+  let html = '';
+  if (currentPage > 1) html += `<button class="page-btn" onclick="goPage(${currentPage-1})">←</button>`;
+  for (let i = 1; i <= pagination.pages; i++) html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+  if (currentPage < pagination.pages) html += `<button class="page-btn" onclick="goPage(${currentPage+1})">→</button>`;
+  el.innerHTML = html;
+}
+
+function goPage(p) { currentPage = p; loadJobs(); window.scrollTo({top:400,behavior:'smooth'}); }
+
+async function openJobDetail(jobId) {
+  const modal = document.getElementById('addJobModal');
+  modal.innerHTML = `<div class="modal-box" onclick="event.stopPropagation()" style="max-width:680px"><div style="text-align:center;padding:40px;color:#999"><div style="font-size:32px;margin-bottom:8px">⏳</div>Loading...</div></div>`;
+  modal.style.display = 'flex';
+  try {
+    const { job } = await apiFetch(`/jobs/${jobId}`);
+    modal.innerHTML = `
+      <div class="modal-box" onclick="event.stopPropagation()" style="max-width:680px">
+        <div class="modal-header">
+          <div style="display:flex;align-items:center;gap:16px">
+            <div style="width:52px;height:52px;background:${job.logo_color||'#0A3D91'};border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:16px;flex-shrink:0">${job.logo_initials||'GL'}</div>
+            <div><h3 style="margin:0">${job.title}</h3><p style="color:var(--grey-mid);font-size:14px;margin:4px 0 0">${job.company}</p></div>
+          </div>
+          <button onclick="closeModal()" class="modal-close">✕</button>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+          <span class="jlc-tag blue" style="padding:5px 14px">${job.job_type}</span>
+          <span class="jlc-tag" style="padding:5px 14px">📍 ${job.location}</span>
+          <span class="jlc-tag" style="padding:5px 14px">🎯 ${job.experience||'Open'}</span>
+          <span class="jlc-tag" style="padding:5px 14px;color:var(--blue);font-weight:700">${job.salary_display||'Competitive'}</span>
+        </div>
+        <h4 style="font-family:Montserrat,sans-serif;color:var(--blue);margin-bottom:8px">About the Role</h4>
+        <p style="color:var(--grey-mid);line-height:1.8;margin-bottom:20px;font-size:15px">${job.description}</p>
+        ${job.requirements?`<h4 style="font-family:Montserrat,sans-serif;color:var(--blue);margin-bottom:8px">Requirements</h4><p style="color:var(--grey-mid);line-height:1.8;margin-bottom:20px;font-size:15px">${job.requirements}</p>`:''}
+        <div style="display:flex;gap:12px;margin-top:8px">
+          <button class="btn-primary large" style="flex:1" onclick="closeModal();openApplyModal('${job.id}','${(job.title||'').replace(/'/g,"\\'")}','${(job.company||'').replace(/'/g,"\\'")}')">Apply for This Role</button>
+          <button class="btn-outline-blue" onclick="closeModal()">Back</button>
+        </div>
+      </div>`;
+  } catch(err) { modal.innerHTML = `<div class="modal-box" onclick="event.stopPropagation()"><p style="padding:20px;color:#999">Could not load job details.</p><button class="btn-outline-blue" onclick="closeModal()">Close</button></div>`; }
+}
+
+function openApplyModal(jobId, jobTitle, company) {
+  const modal = document.getElementById('addJobModal');
+  modal.innerHTML = `
+    <div class="modal-box" onclick="event.stopPropagation()" style="max-width:640px">
+      <div class="modal-header">
+        <div><h3>Apply: ${jobTitle}</h3><p style="color:var(--grey-mid);font-size:13px;margin-top:4px">${company}</p></div>
+        <button onclick="closeModal()" class="modal-close">✕</button>
+      </div>
+      <form id="applyForm" onsubmit="submitApplication(event,'${jobId}')" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>Full Name *</label><input type="text" id="applyName" required/></div>
+          <div class="form-group"><label>Email *</label><input type="email" id="applyEmail" required/></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>Phone</label><input type="tel" id="applyPhone"/></div>
+          <div class="form-group"><label>Current Title</label><input type="text" id="applyRole"/></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>Current Employer</label><input type="text" id="applyEmployer"/></div>
+          <div class="form-group"><label>Years Experience</label><input type="number" id="applyExp" min="0" max="50"/></div>
+        </div>
+        <div class="form-group"><label>LinkedIn URL</label><input type="url" id="applyLinkedin" placeholder="https://linkedin.com/in/yourname"/></div>
+        <div class="form-group"><label>Cover Letter</label><textarea id="applyCover" rows="4" placeholder="Why are you the right fit?"></textarea></div>
+        <div style="background:rgba(10,61,145,0.04);border:1px dashed rgba(10,61,145,0.2);border-radius:10px;padding:14px;text-align:center;color:var(--grey-mid);font-size:13px">
+          📎 Email your CV to <strong>apply@globallinkers.ng</strong> with subject: <strong>${jobTitle}</strong>
+        </div>
+        <div style="display:flex;gap:12px">
+          <button type="submit" class="btn-primary large" style="flex:1" id="applySubmitBtn">Submit Application</button>
+          <button type="button" class="btn-outline-blue" onclick="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>`;
+  modal.style.display = 'flex';
+}
+
+async function submitApplication(e, jobId) {
+  e.preventDefault();
+  const btn = document.getElementById('applySubmitBtn');
+  btn.textContent = 'Submitting...'; btn.disabled = true;
+  try {
+    await apiFetch('/applications', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ job_id: jobId, full_name: document.getElementById('applyName').value, email: document.getElementById('applyEmail').value, phone: document.getElementById('applyPhone').value, current_role: document.getElementById('applyRole').value, current_employer: document.getElementById('applyEmployer').value, experience_years: parseInt(document.getElementById('applyExp').value)||null, linkedin_url: document.getElementById('applyLinkedin').value, cover_letter: document.getElementById('applyCover').value })
+    });
+    closeModal();
+    showToast('Application submitted! We will be in touch soon.', 'success');
+    loadJobs();
+  } catch(err) { btn.textContent = 'Submit Application'; btn.disabled = false; showToast(err.message||'Failed to submit', 'error'); }
+}
+
+async function submitJob(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = 'Submitting...'; btn.disabled = true;
+  const allInputs = e.target.querySelectorAll('input,select,textarea');
+  const v = (i) => allInputs[i]?.value || '';
+  try {
+    await apiFetch('/employer-requests', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ company_name: v(0), industry: v(1), contact_name: v(8), contact_email: v(9), contact_phone: v(10), job_title: v(2), department: v(3), job_type: v(4), location: v(5), salary_range: v(6), experience_required: v(7), description: allInputs[11]?.value||'' })
+    });
+    showToast('Request submitted! We will contact you within 2 hours.', 'success');
+    e.target.reset();
+  } catch(err) { showToast(err.message||'Submission failed', 'error'); }
+  finally { btn.textContent = 'Submit Job Vacancy'; btn.disabled = false; }
+}
+
+async function submitContact(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  const inputs = e.target.querySelectorAll('input,select,textarea');
+  const keys = ['full_name','email','phone','user_type','subject','message'];
+  const body = {};
+  inputs.forEach((el, i) => { if (keys[i]) body[keys[i]] = el.value; });
+  try {
+    await apiFetch('/enquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    showToast('Message sent! We will reply within 24 hours.', 'success');
+    e.target.reset();
+  } catch(err) { showToast(err.message||'Failed to send', 'error'); }
+  finally { btn.textContent = 'Send Message'; btn.disabled = false; }
+}
+
+async function adminLogin(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = 'Signing in...'; btn.disabled = true;
+  try {
+    const data = await apiFetch('/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: document.getElementById('adminUser').value, password: document.getElementById('adminPass').value })
+    });
+    setToken(data.token);
+    document.getElementById('admin-login').style.display = 'none';
+    document.getElementById('admin-dashboard').style.display = 'block';
+    initAdminDashboard();
+  } catch(err) { showToast(err.message||'Invalid credentials', 'error'); btn.textContent = 'Sign In'; btn.disabled = false; }
+}
+
+function adminLogout() { clearToken(); document.getElementById('admin-login').style.display = 'flex'; document.getElementById('admin-dashboard').style.display = 'none'; document.getElementById('adminPass').value = ''; showPage('home'); }
+
+async function initAdminDashboard() {
+  document.getElementById('adminDate').textContent = new Date().toLocaleDateString('en-NG', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  try {
+    const data = await apiFetch('/admin/dashboard', { headers: authHeaders() });
+    const vals = [data.kpis.active_jobs, data.kpis.new_applications, data.kpis.active_employers, data.kpis.total_placements, data.kpis.pending_enquiries];
+    document.querySelectorAll('.kpi-num').forEach((el, i) => { if (vals[i] !== undefined) el.textContent = vals[i]; });
+    const appsTable = document.getElementById('recentAppsTable');
+    if (appsTable) appsTable.innerHTML = (data.recent_applications||[]).map(a => `<tr><td><strong>${a.full_name}</strong></td><td style="color:var(--grey-mid)">${a.job_title||'—'}</td><td><span class="status-badge status-${a.status}">${capitalize(a.status)}</span></td></tr>`).join('') || '<tr><td colspan="3" style="text-align:center;color:#999;padding:20px">No applications yet</td></tr>';
+    const reqTable = document.getElementById('recentRequestsTable');
+    if (reqTable) reqTable.innerHTML = (data.recent_requests||[]).map(r => `<tr><td><strong>${r.company_name}</strong></td><td style="color:var(--grey-mid)">${r.job_title}</td><td><span class="status-badge ${r.urgency==='urgent'?'status-closed':r.urgency==='high'?'status-interview':'status-active'}">${capitalize(r.urgency)}</span></td></tr>`).join('') || '<tr><td colspan="3" style="text-align:center;color:#999;padding:20px">No requests yet</td></tr>';
+  } catch(err) { showToast('Could not load dashboard data', 'error'); }
+}
+
+function showAdminTab(tab, el) {
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-nav-link').forEach(l => l.classList.remove('active'));
+  const t = document.getElementById('admin-tab-' + tab);
+  if (t) t.classList.add('active');
+  if (el) el.classList.add('active');
+  if (tab === 'jobs') loadAdminJobs();
+  if (tab === 'candidates') loadAdminApplications();
+  if (tab === 'employers') loadAdminRequests();
+  if (tab === 'enquiries') loadAdminEnquiries();
+}
+
+async function loadAdminJobs() {
+  const tbody = document.getElementById('adminJobsTable');
+  if (!tbody) return;
+  tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:#999">Loading...</td></tr>';
+  try {
+    const { jobs } = await apiFetch('/admin/jobs?limit=50', { headers: authHeaders() });
+    tbody.innerHTML = jobs.length ? jobs.map(j => `<tr><td><strong>${j.title}</strong></td><td>${j.company}</td><td>${j.location}</td><td>${j.job_type}</td><td><span class="status-badge ${j.is_active?'status-active':'status-closed'}">${j.is_active?'Active':'Inactive'}</span></td><td style="color:var(--grey-mid);font-size:13px">${new Date(j.created_at).toLocaleDateString()}</td><td><button onclick="toggleJobStatus('${j.id}',${j.is_active})" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;color:${j.is_active?'#dc2626':'#15803d'}">${j.is_active?'Deactivate':'Activate'}</button></td></tr>`).join('') : '<tr><td colspan="7" style="text-align:center;padding:20px;color:#999">No jobs yet.</td></tr>';
+  } catch(err) { tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:#999">Could not load jobs.</td></tr>'; }
+}
+
+async function toggleJobStatus(id, currentActive) {
+  try {
+    await apiFetch(`/admin/jobs/${id}`, { method: 'PUT', headers: authHeaders(), body: JSON.stringify({ is_active: !currentActive }) });
+    showToast(`Job ${currentActive?'deactivated':'activated'}`, 'success');
+    loadAdminJobs();
+  } catch(err) { showToast('Failed to update job', 'error'); }
+}
+
+async function loadAdminApplications() {
+  const tbody = document.getElementById('adminCandidatesTable');
+  if (!tbody) return;
+  tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">Loading...</td></tr>';
+  try {
+    const { applications } = await apiFetch('/admin/applications?limit=50', { headers: authHeaders() });
+    tbody.innerHTML = applications.length ? applications.map(a => `<tr><td><strong>${a.full_name}</strong><br><small style="color:#999">${a.email}</small></td><td>${a.job_title||'—'}<br><small style="color:#999">${a.company||''}</small></td><td>${a.experience_years?a.experience_years+' yrs':'—'}</td><td>${a.location||'—'}</td><td><select onchange="updateAppStatus('${a.id}',this.value)" style="border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:12px;font-family:Montserrat,sans-serif">${['new','reviewing','shortlisted','interview','offered','placed','rejected'].map(s=>`<option value="${s}" ${a.status===s?'selected':''}>${capitalize(s)}</option>`).join('')}</select></td><td style="color:var(--grey-mid);font-size:13px">${new Date(a.created_at).toLocaleDateString()}</td></tr>`).join('') : '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">No applications yet.</td></tr>';
+  } catch(err) { tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">Could not load applications.</td></tr>'; }
+}
+
+async function updateAppStatus(id, status) {
+  try {
+    await apiFetch(`/admin/applications/${id}/status`, { method: 'PATCH', headers: authHeaders(), body: JSON.stringify({ status }) });
+    showToast(`Status updated: ${capitalize(status)}`, 'success');
+    if (status === 'placed') showToast('Placement recorded automatically!', 'success');
+  } catch(err) { showToast('Failed to update status', 'error'); }
+}
+
+async function loadAdminRequests() {
+  const tbody = document.getElementById('adminEmployersTable');
+  if (!tbody) return;
+  tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">Loading...</td></tr>';
+  try {
+    const { requests } = await apiFetch('/admin/employer-requests?limit=50', { headers: authHeaders() });
+    tbody.innerHTML = requests.length ? requests.map(r => `<tr><td><strong>${r.company_name}</strong></td><td>${r.industry||'—'}</td><td>${r.contact_name}<br><small style="color:#999">${r.contact_email}</small></td><td>${r.job_title}</td><td style="color:var(--grey-mid);font-size:13px">${new Date(r.created_at).toLocaleDateString()}</td><td><span class="status-badge status-${r.status==='new'?'new':'active'}">${capitalize(r.status)}</span></td></tr>`).join('') : '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">No requests yet.</td></tr>';
+  } catch(err) { tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999">Could not load requests.</td></tr>'; }
+}
+
+async function loadAdminEnquiries() {
+  const tbody = document.getElementById('adminEnquiriesTable');
+  if (!tbody) return;
+  tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:20px;color:#999">Loading...</td></tr>';
+  try {
+    const { enquiries } = await apiFetch('/admin/enquiries?limit=50', { headers: authHeaders() });
+    tbody.innerHTML = enquiries.length ? enquiries.map(e => `<tr><td><strong>${e.full_name}</strong><br><small style="color:#999">${e.email}</small></td><td><span class="jlc-tag" style="font-size:11px">${e.user_type||'General'}</span></td><td>${e.subject}</td><td style="color:var(--grey-mid);font-size:13px">${new Date(e.created_at).toLocaleDateString()}</td><td><span class="status-badge status-${e.status==='new'?'new':e.status==='replied'?'active':'closed'}">${capitalize(e.status)}</span></td></tr>`).join('') : '<tr><td colspan="5" style="text-align:center;padding:20px;color:#999">No enquiries yet.</td></tr>';
+  } catch(err) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:20px;color:#999">Could not load enquiries.</td></tr>'; }
+}
+
+function showAddJobModal() {
+  const modal = document.getElementById('addJobModal');
+  modal.innerHTML = `<div class="modal-box" onclick="event.stopPropagation()"><div class="modal-header"><h3>Add New Job Listing</h3><button onclick="closeModal()" class="modal-close">✕</button></div><form onsubmit="addNewJob(event)" class="modal-form"><div class="form-row"><div class="form-group"><label>Job Title *</label><input type="text" id="mJobTitle" required/></div><div class="form-group"><label>Company *</label><input type="text" id="mJobCompany" required/></div></div><div class="form-row"><div class="form-group"><label>Location *</label><input type="text" id="mJobLocation" required/></div><div class="form-group"><label>Type *</label><select id="mJobType" required><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option></select></div></div><div class="form-row"><div class="form-group"><label>Category</label><input type="text" id="mJobCategory"/></div><div class="form-group"><label>Experience</label><input type="text" id="mJobExp" placeholder="e.g. 3–5 years"/></div></div><div class="form-row"><div class="form-group"><label>Salary Display</label><input type="text" id="mJobSalary" placeholder="e.g. ₦400k–₦600k/mo"/></div><div class="form-group"><label>Featured?</label><select id="mJobFeatured"><option value="false">No</option><option value="true">Yes</option></select></div></div><div class="form-group full"><label>Description *</label><textarea id="mJobDesc" rows="4" required></textarea></div><div class="modal-actions"><button type="button" class="btn-outline-blue" onclick="closeModal()">Cancel</button><button type="submit" class="btn-primary" id="addJobBtn">Add Job</button></div></form></div>`;
+  modal.style.display = 'flex';
+}
+
+async function addNewJob(e) {
+  e.preventDefault();
+  const btn = document.getElementById('addJobBtn');
+  btn.textContent = 'Adding...'; btn.disabled = true;
+  const title = document.getElementById('mJobTitle').value;
+  const company = document.getElementById('mJobCompany').value;
+  try {
+    await apiFetch('/admin/jobs', { method: 'POST', headers: authHeaders(),
+      body: JSON.stringify({ title, company, location: document.getElementById('mJobLocation').value, job_type: document.getElementById('mJobType').value, category: document.getElementById('mJobCategory').value, experience: document.getElementById('mJobExp').value, salary_display: document.getElementById('mJobSalary').value, description: document.getElementById('mJobDesc').value, is_featured: document.getElementById('mJobFeatured').value==='true', logo_initials: company.substring(0,2).toUpperCase() })
+    });
+    closeModal();
+    showToast(`Job "${title}" added!`, 'success');
+    loadAdminJobs(); loadFeaturedJobs();
+  } catch(err) { showToast(err.message||'Failed to add job', 'error'); btn.textContent = 'Add Job'; btn.disabled = false; }
+}
+
+function closeModal() { const m = document.getElementById('addJobModal'); if (m) m.style.display = 'none'; }
+
+function showToast(msg, type = '') {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = 'toast' + (type ? ' ' + type : '');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadFeaturedJobs();
+  loadJobs();
+  const token = getToken();
+  if (token) {
+    apiFetch('/auth/me', { headers: authHeaders() }).catch(() => clearToken());
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.style.animation = 'fadeUp 0.6s ease both'; observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card, .value-card, .package-card').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>
